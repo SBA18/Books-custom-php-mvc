@@ -1,0 +1,15 @@
+<h3>Liste of Books</h3><br>
+<table class="table table-striped" style="width: 100%;">
+    <tr>
+        <td style="width: 10%;">Title</td>
+        <td style="width: 25%;">Author</td>
+        <td style="width: 50%;">Resume</td>
+    </tr>
+    <?php foreach($data['books'] as $book_data){ ?>
+        <tr>
+            <td><a href="/books/view/<?=$book_data['alias']?>"><?=$book_data['title']?></a></td>
+            <td><?=$book_data['author']?></td>
+            <td><?=substr($book_data['description'], 0, 95)?></td>
+        </tr>
+    <?php } ?>
+</table>
